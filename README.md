@@ -2,20 +2,35 @@
 
 This repo is built from instructions from [Getting started with Structurizr Lite](https://dev.to/simonbrown/getting-started-with-structurizr-lite-27d0).
 
-To run this demo, clone or download it.
-
+## Install
 Make sure you have [Docker installed](https://docs.docker.com/get-docker/) and enter the following in a console:
 
 ```
+git clone git@github.com:dwhelan/c4-simple.git
+cd c4-simple
 docker pull structurizr/lite
-docker run -it --rm -p 8080:8080 -v PATH:/usr/local/structurizr structurizr/lite
 ```
 
-Be sure to replace `PATH` with the full path of this directory on your local file system.
+## Run
 
-Open your browser to http://localhost:8080 to see the generated diagrams.
+**macOS or Linux**
+```
+docker run -it --rm -p 8080:8080 -v `pwd`:/usr/local/structurizr structurizr/lite
+```
 
-If you are running OS with `sh` you can simply start the `run` script:
+**Windows Powershell**
+```
+docker run -it --rm -p 8080:8080 -v $pwd:/usr/local/structurizr structurizr/lite
+```
+
+**Windows Command**
+```
+docker run -it --rm -p 8080:8080 -v %CD%:/usr/local/structurizr structurizr/lite
+```
+
+Browse to http://localhost:8080 to see the generated diagrams.
+
+If you are running macOS or Linus you can simply use the `run` script:
 
 ```
 ./run
