@@ -10,7 +10,6 @@ Make sure you have [Docker installed](https://docs.docker.com/get-docker/) and e
 ```
 git clone git@github.com:dwhelan/c4-simple.git
 cd c4-simple
-docker pull structurizr/lite
 ```
 
 ## Run
